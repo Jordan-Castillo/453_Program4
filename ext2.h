@@ -1,3 +1,5 @@
+#ifndef _EXTH_
+#define _EXTH_
 /*
  * Copyright (C) 1992, 1993, 1994, 1995
  * Remy Card (card@masi.ibp.fr)
@@ -10,7 +12,7 @@
  *
  *  Copyright (C) 1991, 1992  Linus Torvalds
  */
-
+#include <stdint.h>
 void read_data(uint32_t block, uint16_t offset, uint8_t* data, uint16_t size);
 
 typedef unsigned int uint32_t;
@@ -165,3 +167,4 @@ struct ext2_dir_entry {
 #define EXT2_S_IFDIR 0x4000   /* directory */
 #define EXT2_S_IFCHR 0x2000   /* character device */
 #define EXT2_S_IFIFO 0x1000   /* fifo */
+#endif
