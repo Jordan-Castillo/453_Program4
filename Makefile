@@ -1,5 +1,5 @@
-main: program4.c
-	gcc program4.c -o ext2reader
+main: program4.c ext2.c
+	gcc -o ext2reader program4.c ext2.c
 
 clean:
 		rm -fr *.elf *.hex *.o ext2reader

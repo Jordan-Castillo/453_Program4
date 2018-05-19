@@ -7,6 +7,10 @@ int main(int argc, char *argv[]){
    if(argc > 1){
       fileName = argv[1];
       fp = fopen(fileName, "r");
+      if(fp == NULL){
+         printf("cant find file '%s'!", fileName);
+         exit(0);
+      }
    }
    else{ //error message
       printf("Usage: ext2reader <flags> <filename> <directory>\n");
