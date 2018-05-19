@@ -11,6 +11,9 @@ int main(int argc, char *argv[]){
          printf("cant find file '%s'!", fileName);
          exit(0);
       }
+      else{
+         printf("all was fine\n");
+      }
    }
    else{ //error message
       printf("Usage: ext2reader <flags> <filename> <directory>\n");
