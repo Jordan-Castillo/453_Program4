@@ -11,6 +11,8 @@
  *  Copyright (C) 1991, 1992  Linus Torvalds
  */
 
+void read_data(uint32_t block, uint16_t offset, uint8_t* data, uint16_t size);
+
 typedef unsigned int uint32_t;
 typedef unsigned short uint16_t;
 typedef unsigned char uint8_t;
