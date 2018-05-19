@@ -1,4 +1,4 @@
-//#include "ext2.h"
+#include "ext2.h"
 #include "program4.h"
 //the block argument is in terms of SD card 512 byte sectors
 extern FILE *fp;
