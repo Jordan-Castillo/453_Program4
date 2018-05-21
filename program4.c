@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
       else{//start the work here....
          read_data(0, 0, p, 1024);
          superBlock = (struct ext2_super_block *)p;
-         printf("first byte... superBlock.s_inodes_count = '%d', also does this explode?", superBlock -> s_inodes_count);
+         printf("first byte... superBlock.s_inodes_count = '%u' or '%x', also does this explode?", superBlock -> s_inodes_count, superBlock -> s_inodes_count);
 
       }
    }
