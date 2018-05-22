@@ -38,6 +38,8 @@ int main(int argc, char *argv[]){
    printf("i_size = %x\n", iNode.i_size);
    printf("i_blocks = %u\n", iNode.i_blocks);
    printf("i_links_count = %u\n", iNode.i_links_count);
+   printf("size superblock = %lu\n", sizeof(struct ext2_super_block));
+   printf("size superblock = %lu\n", sizeof(struct ext2_super_block));
 
 
 
