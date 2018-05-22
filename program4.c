@@ -27,6 +27,11 @@ int main(int argc, char *argv[]){
    giveSuperBlock(&supB);
    printf("s_inodes_count = %u\n", supB.s_inodes_count);
    printf("s_inodes_per_group = %u\n", supB.s_inodes_per_group);
+
+   printf("s_first_data_block %%u = %u\n", supB.s_first_data_block);
+   printf("s_first_data_block %%x = %x\n", supB.s_first_data_block);
+
+
    iNodesPerGroup = supB.s_inodes_per_group;
 
    giveInodes(&iNode);
