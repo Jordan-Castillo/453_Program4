@@ -4,7 +4,7 @@ FILE *fp;
 
 int main(int argc, char *argv[]){
    char *fileName;
-   struct ext2_super_block *superBlock;
+   struct ext2_super_block *supB;
    uint8_t arr[1024];
    uint8_t *p = &arr[0];
    if(argc > 1){
@@ -16,9 +16,20 @@ int main(int argc, char *argv[]){
       }
       else{//start the work here....
          read_data(0, 0, p, 1024);
-         superBlock = (struct ext2_super_block *)p;
-         printf("first byte... superBlock.s_inodes_count = '%u' or '%x', also does this explode?", superBlock -> s_inodes_count, superBlock -> s_inodes_count);
-
+         supB = (struct ext2_super_block *)p;
+         printf("form: %%x %%u %%d\n");
+         printf("sB.s_inodes_count = %x %u %d", supB -> s_inodes_count,
+         supB -> s_inodes_count, supB -> s_inodes_count);
+         printf("sB.s_blocks_count = %x %u %d", supB -> s_blocks_count,
+         supB -> s_blocks_count, supB -> s_blocks_count);
+         printf("sB.s_r_blocks_count = %x %u %d", supB -> s_r_blocks_count,
+         supB -> s_r_blocks_count, supB -> s_r_blocks_count);
+         printf("sB.s_free_blocks_count = %x %u %d", supB -> s_free_blocks_count,
+         supB -> s_free_blocks_count, supB -> s_free_blocks_count);
+         printf("sB.s_free_inodes_count = %x %u %d", supB -> s_free_inodes_count,
+         supB -> s_free_inodes_count, supB -> s_free_inodes_count);
+         printf("sB.s_log_block_size = %x %u %d", supB -> s_log_block_size,
+         supB -> s_log_block_size, supB -> s_log_block_size);
       }
    }
    else{ //error message
