@@ -18,17 +18,17 @@ int main(int argc, char *argv[]){
          read_data(0, 0, p, 1024);
          supB = (struct ext2_super_block *)p;
          printf("form: %%x %%u %%d\n");
-         printf("sB.s_inodes_count = %x %u %d", supB -> s_inodes_count,
+         printf("sB.s_inodes_count = %x %u %d\n", supB -> s_inodes_count,
          supB -> s_inodes_count, supB -> s_inodes_count);
-         printf("sB.s_blocks_count = %x %u %d", supB -> s_blocks_count,
+         printf("sB.s_blocks_count = %x %u %d\n", supB -> s_blocks_count,
          supB -> s_blocks_count, supB -> s_blocks_count);
-         printf("sB.s_r_blocks_count = %x %u %d", supB -> s_r_blocks_count,
+         printf("sB.s_r_blocks_count = %x %u %d\n", supB -> s_r_blocks_count,
          supB -> s_r_blocks_count, supB -> s_r_blocks_count);
-         printf("sB.s_free_blocks_count = %x %u %d", supB -> s_free_blocks_count,
+         printf("sB.s_free_blocks_count = %x %u %d\n", supB -> s_free_blocks_count,
          supB -> s_free_blocks_count, supB -> s_free_blocks_count);
-         printf("sB.s_free_inodes_count = %x %u %d", supB -> s_free_inodes_count,
+         printf("sB.s_free_inodes_count = %x %u %d\n", supB -> s_free_inodes_count,
          supB -> s_free_inodes_count, supB -> s_free_inodes_count);
-         printf("sB.s_log_block_size = %x %u %d", supB -> s_log_block_size,
+         printf("sB.s_log_block_size = %x %u %d\n", supB -> s_log_block_size,
          supB -> s_log_block_size, supB -> s_log_block_size);
       }
    }
