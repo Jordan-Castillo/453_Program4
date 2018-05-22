@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
    iNodesPerGroup = supB.s_inodes_per_group;
 
    giveInodes(&iNode);
-   printf("i_size = %u\n", iNode.i_size);
+   printf("i_size = %x\n", iNode.i_size);
 
 
 
