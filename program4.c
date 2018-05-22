@@ -28,7 +28,9 @@ int main(int argc, char *argv[]){
    printf("s_inodes_count = %u\n", supB.s_inodes_count);
    printf("s_inodes_per_group = %u\n", supB.s_inodes_per_group);
    iNodesPerGroup = supB.s_inodes_per_group;
+
    giveInodes(&iNode);
+   printf("i_size = %u\n", iNode.i_size);
 
 
 
