@@ -5,10 +5,11 @@ FILE *fp;
 
 //CONSTRUCTORS...
 void giveSuperBlock(struct ext2_super_block *p);
-
+void giveInodes(struct ext2_inode *p);
 
 int main(int argc, char *argv[]){
    char *fileName, *destination;
+   int iNodesPerGroup;
    struct ext2_super_block supB;
    struct ext2_inode iNode;
 
@@ -26,9 +27,15 @@ int main(int argc, char *argv[]){
    giveSuperBlock(&supB);
    printf("s_inodes_count = %u\n", supB.s_inodes_count);
    printf("s_inodes_per_group = %u\n", supB.s_inodes_per_group);
+   iNodesPerGroup = supB.s_inodes_per_group;
+   giveInodes(&iNode);
 
 
 
+}
+
+void giveInodes(struct ext2_inode *p){
+   read_data(6, 0, (uint8_t*)p, sizeof(struct ext2_inode));
 }
 
 void giveSuperBlock(struct ext2_super_block *p){
