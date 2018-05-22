@@ -50,6 +50,6 @@ void giveInodes(struct ext2_inode *p){
 }
 
 void giveSuperBlock(struct ext2_super_block *p){
-   read_data(2, 0, (uint8_t*)p, sizeof(struct ext2_super_block));
+   read_data(2, 0, (uint8_t*)p, 1024);
    return;
 }
