@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
          exit(0);
       }
       else{//start the work here....
-         read_data(0, 0, p, 1024);
+         read_data(0, 1024, p, 1024);
          supB = (struct ext2_super_block *)p;
          printf("form: %%x %%u %%d\n");
          printf("sB.s_inodes_count = %x %u %d\n", supB -> s_inodes_count,
